@@ -1,0 +1,553 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "78f5be3acf0414cbd615",
+  "position": {
+    "x": 0,
+    "y": 591.08955223880594,
+    "z": 0,
+    "height": 329.910447761194,
+    "width": 1279.5485074626865,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuários PRO"
+                    }
+                  },
+                  "Property": "displayName"
+                }
+              },
+              "queryRef": "tb_usuarios_pbi_pro.displayName",
+              "nativeQueryRef": "displayName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "CreationDate"
+                }
+              },
+              "queryRef": "activities.CreationDate",
+              "nativeQueryRef": "Interação",
+              "displayName": "Interação"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "Horario"
+                }
+              },
+              "queryRef": "activities.Horario",
+              "nativeQueryRef": "Horario"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "_TipoDeObjeto"
+                }
+              },
+              "queryRef": "activities._TipoDeObjeto",
+              "nativeQueryRef": "Tipo de Objeto",
+              "displayName": "Tipo de Objeto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "_SubCategoria"
+                }
+              },
+              "queryRef": "activities._SubCategoria",
+              "nativeQueryRef": "Objeto",
+              "displayName": "Objeto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "ObjectDisplayName"
+                }
+              },
+              "queryRef": "activities.ObjectDisplayName",
+              "nativeQueryRef": "Objeto Nome",
+              "displayName": "Objeto Nome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "Activity"
+                }
+              },
+              "queryRef": "activities.Activity",
+              "nativeQueryRef": "Atividade",
+              "displayName": "Atividade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "ItemName"
+                }
+              },
+              "queryRef": "activities.ItemName",
+              "nativeQueryRef": "Nome do Item",
+              "displayName": "Nome do Item"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades"
+                    }
+                  },
+                  "Property": "WorkSpaceName"
+                }
+              },
+              "queryRef": "activities.WorkSpaceName",
+              "nativeQueryRef": "Workspace",
+              "displayName": "Workspace"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Atividades"
+                  }
+                },
+                "Property": "CreationDate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "325.62004228050745D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "gateways.displayName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "161.00600215576492D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "gateways.version"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "236.6138907123213D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "gateways.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "470.89607918454607D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "gateways.id"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "234D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "connections.connectivityType"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "422D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "connections.id"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "382D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "connections.displayName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "325.9693495917319D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces_scanned_users.Identifier"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "314.3251234081128D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces_scanned_users.WorkspaceId"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "214.32863745997543D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "activities.Activity"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "156.87081237178322D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "activities.ItemName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "213.31167342681925D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "activities.WorkSpaceName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "272.27286373048184D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "tb_usuarios_pbi_pro.displayName"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Atividades do usuário'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

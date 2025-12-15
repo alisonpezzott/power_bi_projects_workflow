@@ -1,0 +1,568 @@
+table Atividades
+	lineageTag: df6fe733-b99f-40b4-8f1d-a8ea1865a661
+
+	column RefreshType
+		dataType: string
+		lineageTag: ebeda8ff-31a7-449b-a713-2713f75ad5bf
+		summarizeBy: none
+		sourceColumn: RefreshType
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: string
+		lineageTag: d9ee7664-56c8-4eef-81e3-7a0f326bd4b7
+		summarizeBy: none
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 23ac780f-bc67-4bc2-853a-956aead10186
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataConnectivityMode
+		dataType: string
+		lineageTag: af9561ce-1729-41ce-8762-aa12ea91d333
+		summarizeBy: none
+		sourceColumn: DataConnectivityMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemName
+		dataType: string
+		lineageTag: 934b6b68-edea-466c-941f-4be39840a6b3
+		summarizeBy: none
+		sourceColumn: ItemName
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserType
+		dataType: int64
+		formatString: 0
+		lineageTag: 449f065a-3e8c-419a-95c7-412fad6c3114
+		summarizeBy: sum
+		sourceColumn: UserType
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubfolderObjectId
+		dataType: string
+		lineageTag: 7885f5a3-6c82-4a6f-a908-65e4c06a9a07
+		summarizeBy: none
+		sourceColumn: SubfolderObjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubfolderId
+		dataType: int64
+		formatString: 0
+		lineageTag: d85490ce-4612-4d43-9803-7476843fae1f
+		summarizeBy: count
+		sourceColumn: SubfolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistributionMethod
+		dataType: string
+		lineageTag: ba4c3f64-5542-44f9-8a20-a528781d61de
+		summarizeBy: none
+		sourceColumn: DistributionMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequestId
+		dataType: string
+		lineageTag: 329cbed3-fe33-46be-b764-ef9322686e38
+		summarizeBy: none
+		sourceColumn: RequestId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArtifactKind
+		dataType: string
+		lineageTag: 54eea517-ad7d-4941-8d75-b15f722b5238
+		summarizeBy: none
+		sourceColumn: ArtifactKind
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: a68dedb9-67fa-4e31-be14-292fd08c999f
+		summarizeBy: none
+		sourceColumn: CreationDate
+
+		variation Variation
+			isDefault
+			relationship: 7ebb4631-113c-4333-8b52-bd2c112aef5e
+			defaultHierarchy: LocalDateTable_bdc561d3-9b82-4252-bb5a-94d2e39f324c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CapacityName
+		dataType: string
+		lineageTag: f5024293-2bee-485f-9982-04494ecd4f7a
+		summarizeBy: none
+		sourceColumn: CapacityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Workload
+		dataType: string
+		lineageTag: c802c606-b2f8-4ef7-bf1c-0a8ac4a5ecf6
+		summarizeBy: none
+		sourceColumn: Workload
+
+		annotation SummarizationSetBy = Automatic
+
+	column RefreshEnforcementPolicy
+		dataType: int64
+		formatString: 0
+		lineageTag: 08fb2ea0-994e-4146-b14d-fc9f9fafc4e6
+		summarizeBy: sum
+		sourceColumn: RefreshEnforcementPolicy
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityId
+		dataType: string
+		lineageTag: bba31757-1521-453a-be94-e91e7a484b8d
+		summarizeBy: none
+		sourceColumn: CapacityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity
+		dataType: string
+		lineageTag: c238978a-cd49-411f-99f2-ec323ddd4142
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordType
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c4ffcd0-b128-4865-8569-56c6f201c459
+		summarizeBy: sum
+		sourceColumn: RecordType
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkSpaceName
+		dataType: string
+		lineageTag: ac9d4ddd-5cf1-4030-b74b-889371c4c905
+		summarizeBy: none
+		sourceColumn: WorkSpaceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportId
+		dataType: string
+		lineageTag: acd1835c-5573-44f8-bc14-83f12e02814f
+		summarizeBy: none
+		sourceColumn: ReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectType
+		dataType: string
+		lineageTag: 8e5854a4-4372-49f6-a652-023ed2814849
+		summarizeBy: none
+		sourceColumn: ObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationHour
+		dataType: string
+		lineageTag: ef03c0f3-9167-45f8-9a80-423a7f712637
+		summarizeBy: none
+		sourceColumn: CreationHour
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operation
+		dataType: string
+		lineageTag: a9e77f08-3705-4870-a77f-edb1b6b29835
+		summarizeBy: none
+		sourceColumn: Operation
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectId
+		dataType: string
+		lineageTag: 1ddbb1ff-1fd5-460c-87e3-96d11e6fbd4f
+		summarizeBy: none
+		sourceColumn: ObjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectDisplayName
+		dataType: string
+		lineageTag: e5841400-efb9-4028-970a-cc95dbef20b7
+		summarizeBy: none
+		sourceColumn: ObjectDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArtifactName
+		dataType: string
+		lineageTag: c00aa4fd-2048-4193-9337-68ab8ab22807
+		summarizeBy: none
+		sourceColumn: ArtifactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 889a4b34-9e38-4dff-a6c8-1b200260f3dd
+		summarizeBy: none
+		sourceColumn: CreationTime
+
+		variation Variation
+			isDefault
+			relationship: 572741e3-da4b-4476-9bc4-25af1795e771
+			defaultHierarchy: LocalDateTable_409a5947-c282-4b9e-be8f-22af21b71d44.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserAgent
+		dataType: string
+		lineageTag: e7d3948a-c7a5-4e04-9a99-b31f91d1e97c
+		summarizeBy: none
+		sourceColumn: UserAgent
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubfolderName
+		dataType: string
+		lineageTag: 9f0e785e-1597-4d77-a8b3-9732c006c2c9
+		summarizeBy: none
+		sourceColumn: SubfolderName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActivityId
+		dataType: string
+		lineageTag: c57e4872-e050-49b0-ae95-7d7d27288eb9
+		summarizeBy: none
+		sourceColumn: ActivityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArtifactId
+		dataType: string
+		lineageTag: 36e784bc-0fdb-45d3-9e90-7bbcd6e1a96b
+		summarizeBy: none
+		sourceColumn: ArtifactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetId
+		dataType: string
+		lineageTag: 749eb282-f036-4119-9ed4-d173c3f66f0e
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientIP
+		dataType: string
+		lineageTag: 05ab8cb2-aa45-494b-8658-5514727f778b
+		summarizeBy: none
+		sourceColumn: ClientIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationId
+		dataType: string
+		lineageTag: 91867d86-ab6b-4ed4-b1a2-9cf31c87d245
+		summarizeBy: none
+		sourceColumn: OrganizationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetName
+		dataType: string
+		lineageTag: d3235cef-4696-4d3e-b490-8414f1430aae
+		summarizeBy: none
+		sourceColumn: DatasetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportName
+		dataType: string
+		lineageTag: 1a7d5cb1-365e-474e-8fe1-e5597de2d832
+		summarizeBy: none
+		sourceColumn: ReportName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationMinute
+		dataType: string
+		lineageTag: 4c43e57d-982f-4e17-97b1-0e8e5574ac9b
+		summarizeBy: none
+		sourceColumn: CreationMinute
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastRefreshTime
+		dataType: string
+		lineageTag: 60df5455-2dd7-48b0-a3cd-e16460574711
+		summarizeBy: none
+		sourceColumn: LastRefreshTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsSuccess
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 875bdfef-5b59-407e-ab85-a713edafa572
+		summarizeBy: none
+		sourceColumn: IsSuccess
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingType
+		dataType: int64
+		formatString: 0
+		lineageTag: e86bf39a-1c02-4d42-b4fa-5f77295bf4c7
+		summarizeBy: sum
+		sourceColumn: BillingType
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 452a29f6-3f3e-4e63-8f38-1dee863f1a63
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemId
+		dataType: string
+		lineageTag: e40205dc-0d52-4338-bcc1-dec44a818f6d
+		summarizeBy: none
+		sourceColumn: ItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationDateKey
+		dataType: string
+		lineageTag: 0040feae-79b6-42af-a3bc-c98e91778986
+		summarizeBy: none
+		sourceColumn: CreationDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportType
+		dataType: string
+		lineageTag: f46c37aa-fcbd-45b9-a5a3-86cd6fe2ceda
+		summarizeBy: none
+		sourceColumn: ReportType
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserKey
+		dataType: string
+		lineageTag: f561ee30-c641-4a75-8944-58edc5524045
+		summarizeBy: none
+		sourceColumn: UserKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Usuário
+		dataType: string
+		lineageTag: 3a6f4e1e-862f-425a-b438-bb84efd8cd48
+		summarizeBy: none
+		sourceColumn: Usuário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 81ba635e-3de0-41b8-8e9c-349c612ecc51
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column Horario
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 940f6f21-8477-4a21-a463-243497ee1b45
+		summarizeBy: none
+		sourceColumn: Horario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column _TipoDeObjeto = ```
+			
+			VAR API =
+			    CONTAINSSTRING ( Atividades[Activity], "get" )
+			VAR FOLDER =
+			    CONTAINSSTRING ( Atividades[Activity], "folder" )
+			        || CONTAINSSTRING ( Atividades[Activity], "label" )
+			VAR DatSet =
+			    CONTAINSSTRING ( Atividades[Activity], "dataset" )
+			VAR COPILOT =
+			    CONTAINSSTRING ( Atividades[Activity], "copilot" )
+			VAR REPORT =
+			    CONTAINSSTRING ( Atividades[Activity], "report" )
+			        || CONTAINSSTRING ( Atividades[Activity], "import" )
+			VAR ATUALIZACAO =
+			    CONTAINSSTRING ( Atividades[Activity], "refresh" )
+			VAR ACESSO =
+			    CONTAINSSTRING ( Atividades[Activity], "access" )
+			VAR LAKE =
+			    CONTAINSSTRING ( Atividades[Activity], "ShareArtifact" )
+			        || CONTAINSSTRING ( Atividades[Activity], "lake" )
+			VAR exter =
+			    CONTAINSSTRING ( Atividades[Activity], "external" )
+			VAR app =
+			    CONTAINSSTRING ( Atividades[Activity], "UpdateApp" )
+			VAR Dataflow =
+			    CONTAINSSTRING ( Atividades[Activity], "Dataflow" )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        API
+			            && Atividades[ObjectType] = BLANK (), "API PowerBI",
+			        FOLDER
+			            && Atividades[ObjectType] = BLANK (), "Organização Workspace",
+			        DatSet, "Dataset",
+			        COPILOT, "Copilot",
+			        REPORT, "Report",
+			        ATUALIZACAO, "Atualização",
+			        ACESSO, "Acesso ao Aplicativo",
+			        LAKE, "Lakehouse",
+			        exter, "Integração Externa",
+			        app, "Aplicativo",
+			        Dataflow, "Dataflow",
+			        Atividades[ObjectType]
+			    )
+			
+			
+			```
+		lineageTag: 6358d01e-3bbc-4a77-916c-41f4b9e28917
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column _SubCategoria = ```
+			
+			SWITCH(
+			    TRUE(),
+			    Atividades[ObjectType] = BLANK(), Atividades[ArtifactKind], 
+			    Atividades[ObjectType])
+			```
+		lineageTag: a2f0b2ea-df94-48db-8b93-3f4606704fe5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SingleSignOnType
+		dataType: string
+		lineageTag: b3965df8-0d3c-477a-acfa-34a4d446070c
+		summarizeBy: none
+		sourceColumn: SingleSignOnType
+
+		annotation SummarizationSetBy = Automatic
+
+	column TableName
+		dataType: string
+		lineageTag: 3e060f26-cf92-4a42-acd2-90b80bd07a2f
+		summarizeBy: none
+		sourceColumn: TableName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemNewName
+		dataType: string
+		lineageTag: cdf36b88-1a39-4620-ac77-d8b392692944
+		summarizeBy: none
+		sourceColumn: ItemNewName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Atividades = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Sql.Database("kt5q7cqws6juvekyty5hebxrry-vvqpi4ki73tuda7l2ansqa4d5u.datawarehouse.fabric.microsoft.com", "FUAM_Lakehouse"),
+				    dbo_activities = Fonte{[Schema="dbo",Item="activities"]}[Data],
+				     RemovedColumns = Table.RemoveColumns(dbo_activities, {
+				        "FolderDisplayName", "DataflowType", "CapacityUsers", "PaginatedReportDataSources", "ImportSource", 
+				        "OrgAppPermission", "DeploymentPipelineAccesses", "OrganizationalGalleryItemId", "Schedules", 
+				        "TemplateAppObjectId", "TemplateAppIsInstalledWithAutomation", "TenantAdminFeatureSwitches", "SwitchState", 
+				        "DatasourceId", "GatewayClustersObjectIds", "DeploymentPipelineObjectId", "ExportEventStartDateTimeParameter", 
+				        "ExternalResource", "DashboardName", "AppId", "IncludeSubartifacts", "DeploymentPipelineDisplayName", 
+				        "ResultStatus", "CustomVisualAccessTokenSiteUri", "SharingInformation", "GatewayType", "FolderAccessRequests", 
+				        "DeploymentPipelineStageOrder", "IsTenantAdminApi", "ImportType", "RequiredWorkspaces", "ExportedArtifactInfo", 
+				        "TemplatePackageName", "PackageId", "DatasourceDetails", "ReportMobileLayoutAction", "Lineage", 
+				        "DataflowRefreshScheduleType", "DataflowName", "Datasets", "ImportDisplayName", "DatasourceInformations", 
+				        "IsUpdateAppActivity", "GatewayStatus", "TenantAdminFeatureSwitchProperties", "AppName", 
+				        "GatewayId", "ModelsSnapshots", "ArtifactAccessRequestInfo", "CopiedReportId", "IsTemplateAppFromMarketplace", 
+				        "GitIntegrationRequest", "SubscriptionDetails", "GatewayClusterId", "HasFullReportAttachment", 
+				         "SubscribeeInformation", "ExportEventEndDateTimeParameter", 
+				        "AggregatedWorkspaceInformation", "GatewayName", "TemplateAppOwnerTenantObjectId", "DeploymentPipelineId", 
+				        "CopiedReportName", "OrganizationalGalleryItemDisplayName", "FolderObjectId", "AppReportId", 
+				        "WorkspacesSemicolonDelimitedList", "ItemsCount", "ExternalSubscribeeInformation", "TemplateAppVersion", 
+				        "TemplateAppFolderObjectId", "SharingAction", "DatasourceObjectIds", "IncludeExpressions", "Experience", 
+				        "SharingScope", "TileText", "CustomVisualAccessTokenResourceId", "CapacityState", 
+				        "OrganizationalGalleryItemPublishTime", "GatewayClusterDatasources", "SubscriptionSchedule", "UserInformation", 
+				        "ModelId", "CredentialSetupMode", "ExcludePersonalWorkspaces", "DashboardId", "DeploymentPipelineOperationId", 
+				        "WorkspaceAccessList", "TargetWorkspaceId", "Monikers", "ExportedArtifactDownloadInfo", "UpdateDatasourcesRequest", 
+				        "DataflowId", "ConsumptionMethod", "ImportId", "ModelSettings", "GatewayClusters", "ActionSource", 
+				        "ActionSourceDetail", "ArtifactObjectId", "ArtifactType", "AuditedArtifactInformation", 
+				        "DataflowAccessTokenRequestParameters", "DataflowAllowNativeQueries", "DatasetCertificationStage", "Datasources", 
+				        "DomainId", "EmbedTokenId", "EndPoint", "ItemType", "LabelEventType", "MentionedUsersInformation", 
+				        "OldSensitivityLabelId", "OriginalOwner", "OwningAppContext", "PinReportToTabInformation", 
+				        "PowerPlatformEnvironmentId", "PreppedForCopilot", "ReportCertificationStage", "SensitivityLabelEventData", 
+				        "SensitivityLabelId", "ShareLinkId", "TakingOverOwner", "WorkspacesModifiedSince", "GatewayMemberId", 
+				        "ShareWithCurrentFilter", "AccessRequestMessage", "AccessRequestType", "MembershipInformation", "SnapshotId", 
+				        "InPlaceSharingEnabled"
+				    }),
+				    #"Linhas Filtradas" = Table.SelectRows(RemovedColumns, each ([CapacityName] = "eletrobras") and 
+				        Date.IsInPreviousNDays([CreationDate], 60)
+				),
+				
+				    // Extrai usuário antes do @
+				    AddUsuario = Table.AddColumn(#"Linhas Filtradas", "Usuário", each Text.BeforeDelimiter([UserId], "@"), type text),
+				
+				    // Extrai hora da criação como texto
+				    AddTimeText = Table.AddColumn(AddUsuario, "Time", each Text.AfterDelimiter([CreationTime], "T")),
+				
+				    // Converte para tipo time
+				    ConvertedTime = Table.TransformColumnTypes(AddTimeText, {{"Time", type time}}),
+				
+				    // Subtrai 3 horas
+				    AddHorario = Table.AddColumn(ConvertedTime, "Horario", each [Time] - #duration(0, 3, 0, 0), type time),
+				
+				    // Ajusta tipo da coluna CreationTime
+				    FinalTypes = Table.TransformColumnTypes(AddHorario, {{"CreationTime", type datetime}})
+				in
+				    FinalTypes
+				```
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "23ce630a6bfd2b3c5696",
+  "position": {
+    "x": 0,
+    "y": 50.402985074626862,
+    "z": 1000,
+    "height": 252.0149253731343,
+    "width": 1279.5485074626865,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuários PRO"
+                    }
+                  },
+                  "Property": "displayName"
+                }
+              },
+              "queryRef": "tb_usuarios_pbi_pro.displayName",
+              "nativeQueryRef": "Usuário",
+              "displayName": "Usuário"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Itens Ativos"
+                    }
+                  },
+                  "Property": "name"
+                }
+              },
+              "queryRef": "active_items.name",
+              "nativeQueryRef": "Artefato",
+              "displayName": "Artefato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Itens Ativos"
+                    }
+                  },
+                  "Property": "type"
+                }
+              },
+              "queryRef": "active_items.type",
+              "nativeQueryRef": "Tipo",
+              "displayName": "Tipo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Workspaces"
+                    }
+                  },
+                  "Property": "WorkspaceName"
+                }
+              },
+              "queryRef": "workspaces.WorkspaceName",
+              "nativeQueryRef": "Workspace",
+              "displayName": "Workspace"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Itens Ativos"
+                    }
+                  },
+                  "Property": "lastUpdatedDate"
+                }
+              },
+              "queryRef": "active_items.lastUpdatedDate",
+              "nativeQueryRef": "Última Atualização",
+              "displayName": "Última Atualização"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Itens Ativos"
+                    }
+                  },
+                  "Property": "Time"
+                }
+              },
+              "queryRef": "active_items.Time",
+              "nativeQueryRef": "Hora",
+              "displayName": "Hora"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "388.1934801256562D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "tb_usuarios_pbi_pro.displayName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "241.40902452976968D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "active_items.name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.98307774683056D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "active_items.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "225.9492177451552D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.WorkspaceName"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Informações sobre os artefatos'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

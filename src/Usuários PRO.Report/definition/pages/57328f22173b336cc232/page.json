@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "57328f22173b336cc232",
+  "displayName": "Over",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "06d03e79baf6184037f5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Usuários PRO"
+              }
+            },
+            "Property": "displayName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "3cd6690a4923c702fc20",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "24259cec1f349ecdfe63",
+        "boundFilter": "06d03e79baf6184037f5",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Usuários PRO"
+              }
+            },
+            "Property": "displayName"
+          }
+        }
+      }
+    ],
+    "referenceScope": "CrossReport"
+  }
+}

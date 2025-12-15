@@ -1,0 +1,27 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Atividades","Workspaces","Itens Ativos","_Medidas","Usuários PRO"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Atividades
+ref table DateTableTemplate_a29d9402-a475-4c8d-ba08-e9fad60f66db
+ref table LocalDateTable_bdc561d3-9b82-4252-bb5a-94d2e39f324c
+ref table LocalDateTable_409a5947-c282-4b9e-be8f-22af21b71d44
+ref table Workspaces
+ref table 'Itens Ativos'
+ref table LocalDateTable_c4377eca-7d28-4d79-b9e0-d3530414c350
+ref table _Medidas
+ref table LocalDateTable_5b319a34-2c30-4b5c-a047-245407f6ca34
+ref table 'Usuários PRO'
+
+ref cultureInfo pt-BR
+

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "7bd9ad322b8d1fd46c94",
+  "displayName": "Detalhe",
+  "displayOption": "FitToPage",
+  "height": 921,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f004ce6ed83f3c79b97a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Usuários PRO"
+              }
+            },
+            "Property": "displayName"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Usuários PRO",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "displayName"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Gabriela Casal Benassi'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "98b1f82e7efb96f292c1",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "3c646b0b33be978cd092",
+        "boundFilter": "f004ce6ed83f3c79b97a",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Usuários PRO"
+              }
+            },
+            "Property": "displayName"
+          }
+        }
+      }
+    ]
+  }
+}

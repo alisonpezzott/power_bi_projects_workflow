@@ -1,0 +1,32 @@
+relationship 7ebb4631-113c-4333-8b52-bd2c112aef5e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Atividades.CreationDate
+	toColumn: LocalDateTable_bdc561d3-9b82-4252-bb5a-94d2e39f324c.Date
+
+relationship 572741e3-da4b-4476-9bc4-25af1795e771
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Atividades.CreationTime
+	toColumn: LocalDateTable_409a5947-c282-4b9e-be8f-22af21b71d44.Date
+
+relationship 4ab047f1-621a-4d35-a7a0-82aeefc69a68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Itens Ativos'.fuam_modified_at
+	toColumn: LocalDateTable_c4377eca-7d28-4d79-b9e0-d3530414c350.Date
+
+relationship AutoDetected_521aa0ec-a958-438f-bcaf-5f10886dd289
+	fromColumn: 'Itens Ativos'.workspaceId
+	toColumn: Workspaces.WorkspaceId
+
+relationship 97148002-a3a6-484e-b63e-40a81c0b0cbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Itens Ativos'.lastUpdatedDate
+	toColumn: LocalDateTable_5b319a34-2c30-4b5c-a047-245407f6ca34.Date
+
+relationship b1a78d15-16a7-4cf0-48f2-03de7a32c965
+	fromColumn: 'Itens Ativos'.creatorUserPrincipalName
+	toColumn: 'Usuários PRO'.userPrincipalName
+
+relationship 1ef839f1-842e-7d4e-65df-493d8b63e915
+	fromColumn: Atividades.UserId
+	toColumn: 'Usuários PRO'.userPrincipalName
+

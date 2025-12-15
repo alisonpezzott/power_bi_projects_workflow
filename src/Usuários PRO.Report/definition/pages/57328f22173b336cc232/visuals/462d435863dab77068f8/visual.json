@@ -1,0 +1,276 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "462d435863dab77068f8",
+  "position": {
+    "x": 64.992947813822283,
+    "y": 37.912552891396331,
+    "z": 0,
+    "height": 267.19322990126938,
+    "width": 1215.0070521861776,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuários PRO"
+                    }
+                  },
+                  "Property": "displayName"
+                }
+              },
+              "queryRef": "tb_usuarios_pbi_pro.displayName",
+              "nativeQueryRef": "Usuário",
+              "displayName": "Usuário"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuários PRO"
+                    }
+                  },
+                  "Property": "jobTitle"
+                }
+              },
+              "queryRef": "tb_usuarios_pbi_pro.jobTitle",
+              "nativeQueryRef": "Cargo",
+              "displayName": "Cargo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuários PRO"
+                    }
+                  },
+                  "Property": "managerDisplayName"
+                }
+              },
+              "queryRef": "tb_usuarios_pbi_pro.managerDisplayName",
+              "nativeQueryRef": "Gerente",
+              "displayName": "Gerente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Quantidade de Atividades"
+                }
+              },
+              "queryRef": "_Medidas.Quantidade de Atividades",
+              "nativeQueryRef": "Atividades",
+              "displayName": "Atividades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Ultima Atividade"
+                }
+              },
+              "queryRef": "_Medidas.Ultima Atividade",
+              "nativeQueryRef": "Últ. Atividade",
+              "displayName": "Últ. Atividade"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Quantidade de artefatos"
+                }
+              },
+              "queryRef": "_Medidas.Quantidade de artefatos",
+              "nativeQueryRef": "Artefatos",
+              "displayName": "Artefatos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Ultima atualização (artefato)"
+                }
+              },
+              "queryRef": "_Medidas.Ultima atualização (artefato)",
+              "nativeQueryRef": "Últ. Atualização",
+              "displayName": "Últ. Atualização"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Quantidade de Atividades"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "305.48896053954434D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "tb_usuarios_pbi_pro.displayName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "292.5669957686883D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "tb_usuarios_pbi_pro.jobTitle"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "tb_usuarios_pbi_pro.displayName"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Quantidade de Atividades"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Quantidade de artefatos"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Ultima Atividade"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Ultima atualização (artefato)"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,70 @@
+table 'Usuários PRO'
+	lineageTag: 6cb9cbe5-87be-4e21-9298-9974e7657ba3
+
+	column id
+		dataType: string
+		lineageTag: 5fe15cbc-40c9-411d-802b-f3813f9416e5
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column displayName
+		dataType: string
+		lineageTag: 7fbf025f-f37e-40b6-81c4-4b67a42c3a00
+		summarizeBy: none
+		sourceColumn: displayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column userPrincipalName
+		dataType: string
+		lineageTag: 15731ed1-9740-4363-89e6-e5ef1e7fe8c5
+		summarizeBy: none
+		sourceColumn: userPrincipalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column userType
+		dataType: string
+		lineageTag: 3d39aa5e-3bb6-4d78-bfea-b7124c0b9b4b
+		summarizeBy: none
+		sourceColumn: userType
+
+		annotation SummarizationSetBy = Automatic
+
+	column jobTitle
+		dataType: string
+		lineageTag: e058cc6f-716c-46d5-a8d5-b175b4d7ee30
+		summarizeBy: none
+		sourceColumn: jobTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: d2af6a4a-8ac2-4557-90b9-c1cb154f1240
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerDisplayName
+		dataType: string
+		lineageTag: 38f0407c-a0db-4065-9e66-8fca1af5945a
+		summarizeBy: none
+		sourceColumn: managerDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Usuários PRO' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("kt5q7cqws6juvekyty5hebxrry-ins57e36upluffivrm35iudsde.datawarehouse.fabric.microsoft.com", "lake_CoE_Analytics"),
+				    dbo_tb_usuarios_pbi_pro = Source{[Schema="dbo",Item="tb_usuarios_pbi_pro"]}[Data]
+				in
+				    dbo_tb_usuarios_pbi_pro
+
+	changedProperty = Name
+

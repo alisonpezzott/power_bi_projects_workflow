@@ -1,0 +1,143 @@
+table 'Itens Ativos'
+	lineageTag: 03dcf0e8-6776-4c31-a6dc-4396a1dfed6e
+
+	column type
+		dataType: string
+		lineageTag: fefe6068-dabb-4dee-96e4-f4aef08b6903
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacityId
+		dataType: string
+		lineageTag: 96a0f40c-d865-4731-bf10-d2292efb0412
+		summarizeBy: none
+		sourceColumn: capacityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 994bffa6-46f4-4a8e-a55b-778b95ddb70c
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: d447a174-58d8-46d5-a53c-f8dd9a9c5f6f
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: db8e6fbf-14b9-422a-8afb-6843583792e2
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdatedDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 321e5806-1adc-48fd-9d3d-b82127286a07
+		summarizeBy: none
+		sourceColumn: lastUpdatedDate
+
+		variation Variation
+			isDefault
+			relationship: 97148002-a3a6-484e-b63e-40a81c0b0cbf
+			defaultHierarchy: LocalDateTable_5b319a34-2c30-4b5c-a047-245407f6ca34.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column workspaceId
+		dataType: string
+		lineageTag: c4ba1c8b-04b6-4fb0-aba5-adf2c19100aa
+		summarizeBy: none
+		sourceColumn: workspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column fuam_deleted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3c6d004d-6ffc-4ef5-8906-76727a60ee5c
+		summarizeBy: none
+		sourceColumn: fuam_deleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: string
+		lineageTag: ab89676e-eecb-468e-ad33-d3e06fe157cb
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fuam_modified_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aa591edb-c382-4734-8da4-80cc562b075b
+		summarizeBy: none
+		sourceColumn: fuam_modified_at
+
+		variation Variation
+			isDefault
+			relationship: 4ab047f1-621a-4d35-a7a0-82aeefc69a68
+			defaultHierarchy: LocalDateTable_c4377eca-7d28-4d79-b9e0-d3530414c350.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column folderId
+		dataType: string
+		lineageTag: ba88d450-a3ed-41ac-9628-c10bdaf89da8
+		summarizeBy: none
+		sourceColumn: folderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column creatorUserPrincipalName
+		dataType: string
+		lineageTag: 9fcaba41-3638-4f68-9f21-c1009221d656
+		summarizeBy: none
+		sourceColumn: creatorUserPrincipalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 5d091c4b-75d6-4b3c-9c8b-eca6ff0ffdec
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition 'Itens Ativos' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("kt5q7cqws6juvekyty5hebxrry-vvqpi4ki73tuda7l2ansqa4d5u.datawarehouse.fabric.microsoft.com", "FUAM_Lakehouse"),
+				    dbo_active_items = Source{[Schema="dbo",Item="active_items"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_active_items,{{"lastUpdatedDate", type datetime}}),
+				    #"Inserted Time" = Table.AddColumn(#"Changed Type", "Time", each DateTime.Time([lastUpdatedDate]), type time),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Inserted Time",{{"lastUpdatedDate", type date}})
+				in
+				    #"Changed Type1"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

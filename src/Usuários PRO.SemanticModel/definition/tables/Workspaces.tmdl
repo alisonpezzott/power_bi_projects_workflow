@@ -1,0 +1,36 @@
+table Workspaces
+	lineageTag: 01b944f1-183d-4179-8850-6ff99865336a
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 7a4fa77b-e41f-413f-b9e7-219b77265d4f
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceName
+		dataType: string
+		lineageTag: 5624b50b-d3e9-436e-bdc7-066a0c6f88d3
+		summarizeBy: none
+		sourceColumn: WorkspaceName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Workspaces = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("kt5q7cqws6juvekyty5hebxrry-vvqpi4ki73tuda7l2ansqa4d5u.datawarehouse.fabric.microsoft.com", "FUAM_Lakehouse"),
+				    dbo_workspaces = Fonte{[Schema="dbo",Item="workspaces"]}[Data],
+				    #"Linhas Filtradas" = Table.SelectRows(dbo_workspaces, each ([CapacityId] = "507E9769-CE90-4890-A1B6-0DAC927D5B32") and ([fuam_deleted] = false)),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Linhas Filtradas",{"IsReadOnly", "Type", "fuam_deleted", "CapacityMigrationStatus", "Description", "fuam_modified_at", "State", "IsOnDedicatedCapacity", "HasWorkspaceLevelSettings", "CapacityId", "DefaultDatasetStorageFormat"})
+				in
+				    #"Colunas Removidas"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

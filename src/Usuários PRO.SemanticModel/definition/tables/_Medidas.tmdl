@@ -1,0 +1,42 @@
+table _Medidas
+	lineageTag: 0c6031fb-5fa8-46f1-a1f2-e89695c05e05
+
+	measure 'Ultima Atividade' = LASTDATE(Atividades[CreationDate])
+		formatString: Short Date
+		lineageTag: e5925fab-3f2e-4a11-a419-92e43d143862
+
+	measure 'Ultima atualização (artefato)' = LASTDATE('Itens Ativos'[lastUpdatedDate])
+		formatString: Short Date
+		lineageTag: 249dfb34-3598-4f46-ac4e-ee7bd4a19d04
+
+	measure 'Quantidade de artefatos' = DISTINCTCOUNT('Itens Ativos'[id])
+		formatString: 0
+		lineageTag: eeebb058-101d-46a1-93bf-2bdcbdbf89da
+
+	measure 'Quantidade de Atividades' = DISTINCTCOUNT(Atividades[Id] )
+		formatString: 0
+		lineageTag: 1722a59e-709b-4de5-9eb3-3a170607c8e4
+
+	measure Licenças = DISTINCTCOUNT('Usuários PRO'[id])
+		formatString: 0
+		lineageTag: ed38e00f-61a4-4842-8010-c66249a56151
+
+	column Column1
+		dataType: string
+		lineageTag: f5c0bef9-396c-4798-b7c1-343633dbcb41
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
