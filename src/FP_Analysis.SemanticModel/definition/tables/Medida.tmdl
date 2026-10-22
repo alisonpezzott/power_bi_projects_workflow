@@ -1,0 +1,24 @@
+table Medida
+	lineageTag: 6debf079-79ac-4b6b-adaa-a0c9ca9d38da
+
+	measure SOMA = SUM(FactBudgetActual[ActualAmount])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 5610eab8-4e9d-40ad-82a0-cbfc3397dd28
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column Value
+		formatString: 0
+		lineageTag: 7a43b3e9-6b4c-433b-9522-3489bc2b5af5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medida = calculated
+		mode: import
+		source = {0}
+
+	annotation PBI_Id = 368201e86f62423fa7d4dcfe925d7b27
+

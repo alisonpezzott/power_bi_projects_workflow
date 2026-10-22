@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "7992fc150900d59deca9",
+  "position": {
+    "x": 417.65477057538232,
+    "y": 0,
+    "z": 0,
+    "height": 719.70866715222132,
+    "width": 425.11289147851414,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": []
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccount"
+                    }
+                  },
+                  "Property": "ControlAccount"
+                }
+              },
+              "queryRef": "DimAccount.ControlAccount",
+              "nativeQueryRef": "ControlAccount",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medida"
+                    }
+                  },
+                  "Property": "SOMA"
+                }
+              },
+              "queryRef": "Medida.SOMA",
+              "nativeQueryRef": "SOMA"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
